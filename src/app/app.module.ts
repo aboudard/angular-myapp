@@ -11,6 +11,7 @@ import { DataService } from './data.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModule } from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import 'hammerjs';
 
 @NgModule({
   declarations: [
