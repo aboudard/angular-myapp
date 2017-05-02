@@ -1,3 +1,4 @@
+import { DataService } from '../data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
   private _test: string;
-  constructor() { }
+  constructor(private dataService: DataService) {
+    this.dataService.name$.subscribe(name => this._test = name);
+  }
 
   get test() {
     return this._test;

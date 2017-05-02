@@ -1,3 +1,4 @@
+import { DataService } from './data.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  hero = {name: 'Billy'};
   title = 'ma works!';
   users = [
     {
@@ -30,4 +32,13 @@ export class AppComponent {
       isCool: true
     }
   ];
+
+  constructor(private dataService: DataService) {
+
+  }
+
+putData(name) {
+  this.dataService.setName(name);
+}
+
 }

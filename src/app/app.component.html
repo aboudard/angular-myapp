@@ -1,24 +1,28 @@
 <div fxLayout="column" fxFlex>
     <ma-nav></ma-nav>
 
-    <md-sidenav-container fxFlex>
-        <md-sidenav mode="side" opened>
-            <md-tab-group>
-                <md-tab label="Users">
-                    <md-nav-list>
-                        <md-list-item *ngFor="let user of users">
-                            <span>{{user.name}}</span>
-                        </md-list-item>
-                    </md-nav-list>
-                </md-tab>
-                <md-tab label="Settings">
-                    <span>Settings</span>
-                </md-tab>
-            </md-tab-group>
-        </md-sidenav>
-        <div class="content">
-            {{title}}
-            <router-outlet></router-outlet>
-        </div>
-    </md-sidenav-container>
+
+
+    <md-tab-group>
+        <md-tab label="Users">
+            <md-nav-list>
+                <md-list-item *ngFor="let user of users">
+                    <span>{{user.name}}</span>
+                </md-list-item>
+            </md-nav-list>
+        </md-tab>
+        <md-tab label="Settings">
+            <h4>Settings</h4>
+            <md-input-container>
+                <input mdInput placeholder="Your name" value="Sushi" [(ngModel)]="hero.name">
+            </md-input-container>
+            <div><button md-button (click)="putData(hero.name)">Click me!</button></div>
+        </md-tab>
+    </md-tab-group>
+
+    <div class="content">
+        {{title}}
+        <router-outlet></router-outlet>
+    </div>
+
 </div>
