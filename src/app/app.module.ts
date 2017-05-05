@@ -12,11 +12,15 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModule } from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import 'hammerjs';
+import { AdminComponent } from './admin/admin.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    AdminComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
