@@ -1,3 +1,4 @@
+import { timeout } from './shared/timeout.decorator';
 import { DataService } from './data.service';
 import { Component } from '@angular/core';
 
@@ -32,6 +33,11 @@ export class AppComponent {
       isCool: true
     }
   ];
+
+  @timeout(2000)
+  doIt() {
+    console.log('demo decorator')
+  }
 
   constructor(private dataService: DataService) {
 
