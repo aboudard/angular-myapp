@@ -1,3 +1,5 @@
+import { LoginComponent } from './login/login.component';
+import { LoggedInGuard } from './shared/login.guard';
 import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
@@ -8,14 +10,19 @@ const routes: Routes = [
     path: '',
     children: []
   },
-  { 
+  {
     path: 'home',
     component: HomeComponent
   },
   {
     path: 'admin',
-    component: AdminComponent
-  }
+    component: AdminComponent,
+    canActivate: [LoggedInGuard]
+  },
+{
+  path: 'login',
+  component: LoginComponent
+}
 ];
 
 @NgModule({

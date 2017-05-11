@@ -1,3 +1,4 @@
+import { LoggedInGuard } from './shared/login.guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -14,13 +15,16 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import 'hammerjs';
 import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
+import { UserService } from './user.service';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     AdminComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,7 @@ import { HomeComponent } from './home/home.component';
     BrowserAnimationsModule,
     AppRoutingModule
   ],
-  providers: [DataService],
+  providers: [DataService, UserService, LoggedInGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
