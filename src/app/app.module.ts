@@ -17,6 +17,7 @@ import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
 import { UserService } from './user.service';
 import { LoginComponent } from './login/login.component';
+import { HeroesComponent } from './heroes/heroes.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +25,14 @@ import { LoginComponent } from './login/login.component';
     NavComponent,
     AdminComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    HeroesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule,
+    MaterialModule.forRoot(),
     FlexLayoutModule,
     BrowserAnimationsModule,
     AppRoutingModule

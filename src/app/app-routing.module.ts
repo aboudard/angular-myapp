@@ -1,3 +1,4 @@
+import { HeroesComponent } from './heroes/heroes.component';
 import { LoginComponent } from './login/login.component';
 import { LoggedInGuard } from './shared/login.guard';
 import { AdminComponent } from './admin/admin.component';
@@ -18,6 +19,10 @@ const routes: Routes = [
     path: 'admin',
     component: AdminComponent,
     canActivate: [LoggedInGuard]
+  },
+  {
+    path: 'heroes',
+    component: HeroesComponent
   },
 {
   path: 'login',
