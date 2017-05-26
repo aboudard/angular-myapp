@@ -1,4 +1,4 @@
-import { UserService } from './../user.service';
+import { UserService } from './../shared/user.service';
 import { CanActivate, Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 
