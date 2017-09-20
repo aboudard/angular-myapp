@@ -36,7 +36,7 @@ import { HeroFormComponent } from './heroes/hero-form/hero-form.component';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    MaterialModule.forRoot(),
+    MaterialModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
     AppRoutingModule
