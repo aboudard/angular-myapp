@@ -1,9 +1,9 @@
-<md-list dense>
+<md-nav-list dense>
     <h3 md-subheader>Heroes</h3>
-    <md-list-item *ngFor="let item of heroes">
+    <md-list-item role="link" class="md-2-line" *ngFor="let item of heroes">
         <md-icon md-list-icon>adb</md-icon>
-        {{item.nom}}
+        <h4 md-line><a [routerLink]="['/heroes', item.id]">{{item.nom}}</a></h4>
     </md-list-item>
-</md-list>
+</md-nav-list>
 
 <ma-hero-form (add)="addTodo($event)"></ma-hero-form>

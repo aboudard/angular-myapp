@@ -5,6 +5,7 @@ import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HeroDetailComponent } from "app/heroes/hero-detail/hero-detail.component";
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'heroes',
     component: HeroesComponent
+  },
+  {
+    path: 'heroes/:heroid',
+    component: HeroDetailComponent
   },
 {
   path: 'login',

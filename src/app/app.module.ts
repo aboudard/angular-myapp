@@ -10,7 +10,7 @@ import { NavComponent } from './nav/nav.component';
 import { DataService } from './shared/data.service';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MaterialModule } from '@angular/material';
+import { MdCommonModule, MdButtonModule, MdListModule, MdToolbarModule, MatCardModule, MatIconModule, MatListModule, MatLineModule } from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import 'hammerjs';
 import { AdminComponent } from './admin/admin.component';
@@ -20,6 +20,7 @@ import { LoginComponent } from './login/login.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroesService } from './shared/heroes.service';
 import { HeroFormComponent } from './heroes/hero-form/hero-form.component';
+import { HeroDetailComponent } from './heroes/hero-detail/hero-detail.component';
 
 @NgModule({
   declarations: [
@@ -29,14 +30,17 @@ import { HeroFormComponent } from './heroes/hero-form/hero-form.component';
     HomeComponent,
     LoginComponent,
     HeroesComponent,
-    HeroFormComponent
+    HeroFormComponent,
+    HeroDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    MaterialModule,
+    MdCommonModule,
+    MdButtonModule, MdListModule, MdToolbarModule,
+    MatCardModule, MatIconModule, MatListModule, MatLineModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
     AppRoutingModule
